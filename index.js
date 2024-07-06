@@ -1,5 +1,5 @@
 import express from "express";
-import { commentRouter } from "./routes/comment_route.js";
+import { blogRouter } from "./routes/blog_routes.js";
  import { dbconnection } from "./config/db.js";
 
 
@@ -9,7 +9,7 @@ dbconnection();
 
 const app = express();
 app.use(express.json());
-app.use(commentRouter);
+app.use(blogRouter);
 
 
 // app.get('/', (req, res) => {
